@@ -1,5 +1,6 @@
 <template>
   <div>
+    {{ dataTime }}
     <el-table :data="tableData" stripe style="width: 100%">
       <el-table-column prop="date" label="日期" width="180"> </el-table-column>
       <el-table-column prop="name" label="姓名" width="180"> </el-table-column>
@@ -53,10 +54,13 @@
 </template>
 
 <script>
+import axiosWrap from '../axiosWrap';
+
 export default {
   name: 'homeView',
   data() {
     return {
+      dataTime: '',
       activeNames: ['1'],
       form: {
         name: '',
@@ -91,6 +95,20 @@ export default {
         }
       ]
     };
+  },
+  mounted() {
+    this.dataTime = this.$moment().format('YYYY年MM月DD日');
+    let url = `${location.origin}/logstorage/common/handleLogEvent/Communal_MONITOR_LOGSC`;
+    let params = {
+      appId: 'web-acmSee',
+      app_id: 'web-acmSee',
+      index: 'web-acmSee',
+      business_id: 'web-monitor',
+      timestamp: 1672912057659
+    };
+    axiosWrap.post(url, params).then((res) => {
+      console.log(res, 'res');
+    });
   },
   methods: {
     getRightIcon({ name, title }) {

@@ -4,8 +4,15 @@ import router from './router';
 import store from './store';
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+import moment from 'moment';
 import * as echarts from 'echarts';
+import VueLazyLoad from 'vue-lazyload';
 
+Vue.use(VueLazyLoad, {
+  preLoad: 1,
+  attempt: 2
+});
+Vue.prototype.$moment = moment;
 Vue.prototype.$echarts = echarts;
 Vue.config.productionTip = false;
 Vue.use(ElementUI);
