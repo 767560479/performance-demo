@@ -19,9 +19,8 @@ export default {
         'https://img-pub01.visitshanghai.com.cn/hot-map-2.jpg',
         'https://img-pub01.visitshanghai.com.cn/hot-map-3.jpg',
         'https://img-pub01.visitshanghai.com.cn/hot-map-4.jpg',
-        'https://img-pub01.visitshanghai.com.cn/app/placelist.png',
-        'https://img-pub01.visitshanghai.com.cn/home_bg.png',
         'https://img-pub01.visitshanghai.com.cn/hot-map-cover.jpg',
+        'https://img-pub01.visitshanghai.com.cn/home_bg.png',
         'https://img-pub01.visitshanghai.com.cn/international/picture/3b8f2ae3ece243a9a595dea0390b227b.jpg'
       ]
     };
