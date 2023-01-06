@@ -2,13 +2,29 @@
   <div class="about">
     <h1>This is an about page</h1>
     <div id="main" style="width: 400px; height: 300px"></div>
+    <ul class="img">
+      <li v-for="(item, index) in imgList" :key="index">
+        <img v-lazy="item" alt="" style="width: 768px" />
+      </li>
+    </ul>
   </div>
 </template>
 <script>
 export default {
   name: 'homeView',
   data() {
-    return {};
+    return {
+      imgList: [
+        'https://img-pub01.visitshanghai.com.cn/hot-map-1.jpg',
+        'https://img-pub01.visitshanghai.com.cn/hot-map-2.jpg',
+        'https://img-pub01.visitshanghai.com.cn/hot-map-3.jpg',
+        'https://img-pub01.visitshanghai.com.cn/hot-map-4.jpg',
+        'https://img-pub01.visitshanghai.com.cn/app/placelist.png',
+        'https://img-pub01.visitshanghai.com.cn/home_bg.png',
+        'https://img-pub01.visitshanghai.com.cn/hot-map-cover.jpg',
+        'https://img-pub01.visitshanghai.com.cn/international/picture/3b8f2ae3ece243a9a595dea0390b227b.jpg'
+      ]
+    };
   },
   mounted() {
     this.myEcharts();
