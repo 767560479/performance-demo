@@ -89,12 +89,9 @@ export default {
   },
   mounted() {
     this.dataTime = this.$moment().format('YYYY年MM月DD日');
-    let url = `${location.origin}/logstorage/common/handleLogEvent/Communal_MONITOR_LOGSC`;
+    let url = `${location.origin}/logstorage/common`;
     let params = {
-      appId: 'web-acmSee',
-      app_id: 'web-acmSee',
-      index: 'web-acmSee',
-      business_id: 'web-monitor',
+      appId: 'web-see',
       timestamp: 1672912057659
     };
     axiosWrap.post(url, params).then((res) => {
