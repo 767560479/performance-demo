@@ -1,24 +1,5 @@
-# performance-demo
+列举一些 `常规且有效` 的性能优化建议
 
-## Project setup
-```
-npm install
-```
+1、main 分支是优化后的项目
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+2、test 分支为原始项目
