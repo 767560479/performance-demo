@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div class="aboutView">
     <h1>This is an about page</h1>
     <div id="main" style="width: 400px; height: 300px"></div>
     <ul class="img">
@@ -62,3 +62,12 @@ export default {
   }
 };
 </script>
+<style scoped lang="less">
+.aboutView {
+  padding: 10px;
+
+  .img {
+    width: 80%;
+  }
+}
+</style>
